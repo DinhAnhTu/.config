@@ -219,7 +219,7 @@ bindsym $mod+o mode "openapp"
 
 mode "openapp" {
     bindsym c exec code
-    bindsym b exec brave
+    bindsym m exec microsoft-edge-dev
     bindsym f exec firefox
     bindsym e exec emacs
 
@@ -245,7 +245,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id ~/.config/i3/lock.sh
 ###
 
 #exec --no-startup-id volumeicon
-exec --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf -b
+#exec --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf -b
  
 exec --no-startup-id ibus-daemon --xim -d -r
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
