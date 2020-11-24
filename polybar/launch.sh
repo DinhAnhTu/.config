@@ -13,4 +13,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 #polybar -c ~/.config/polybar/config.ini bottom &
 
 ln -f -t ~/.config/polybar ~/.config/polybar/themes/tiny/*
-polybar -c ~/.config/polybar/config bar &
+polybar -c ~/.config/polybar/config bar-left &
+polybar -c ~/.config/polybar/config bar-right &
+# polybar -c ~/.config/polybar/config bar2 &
