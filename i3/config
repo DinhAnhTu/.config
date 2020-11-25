@@ -25,9 +25,12 @@ gaps top 22
 gaps bottom 0
 
 for_window [class= "^.*"] border pixel 0
-#for_window [title= "^.*"] border pixel 0
+for_window [title= "^.*"] border pixel 0
 
-#border_radius 0
+for_window [class="Termite" instance="termite"] floating enable
+for_window [class="Microsoft-edge-dev" instance="microsoft-edge-dev" window_role="pop-up"] floating enable; resize set 1080px 700px
+
+#border_radius 6
 #smart_borders on
 
 # smart_gaps on
@@ -67,6 +70,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -122,8 +126,11 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
+# RESIZE VARIABLES
+set $center move absolute position center
+
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle; $center
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -220,7 +227,7 @@ bindsym $mod+o mode "openapp"
 mode "openapp" {
     bindsym c exec code
     bindsym m exec microsoft-edge-dev
-    bindsym f exec firefox
+    bindsym o exec opera
     bindsym e exec emacs
 
     # back to normal: Enter or Escape or $mod+r
@@ -251,8 +258,10 @@ exec --no-startup-id ibus-daemon --xim -d -r
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Accel Speed" 1
 
-#exec --no-startup-id xrandr --output eDP-1 --right-of HDMI-1
-exec --no-startup-id xrandr --output eDP-1 --mode 2880x1620
+exec_always xrandr --output eDP-1 --mode 2880x1620
+
+exec_always xrandr --auto --output HDMI-1 --left-of eDP-1 --auto
+
 #exec --no-startup-id xrandr --output eDP-1 --brightness 0.7
 
 exec --no-startup-id xinput --map-to-output 'ELAN Touchscreen' eDP-1

@@ -84,7 +84,7 @@ width = 20%
 height = 21
 offset-x = 15%
 ;offset-y = 1%
-radius = 8
+radius = 4
 ;fixed-center = true
 
 background = ${colors.background}
@@ -104,7 +104,7 @@ module-margin-right = 1
 
 font-0 = NotoSans-Regular:size=11;2
 font-1 = Symbols Nerd Font:size=11;2
-font-2 = Font Awesome:size=11;3
+font-2 = DejaVu Sans:size=11:weight=bold;3
 
 
 modules-left = i3 xwindow
@@ -130,7 +130,7 @@ width = 25%
 height = 21
 offset-x = 65%
 ;offset-y = 5%
-radius = 8
+radius = 4
 ;fixed-center = true
 
 background = ${colors.background}
@@ -150,7 +150,7 @@ module-margin-right = 1
 
 font-0 = NotoSans-Regular:size=11;2
 font-1 = Symbols Nerd Font:size=11;2
-font-2 = Font Awesome:size=11;3
+font-2 = DejaVu Sans:size=11:weight=bold;3
 
 
 modules-left =volume
@@ -176,11 +176,11 @@ cursor-scroll = ns-resize
 
 [bar/bar2]
 monitor = ${env:MONITOR:HDMI-1}
-width = 100%
+width = 20%
 height = 20
-;offset-x = 5%
+offset-x = 40%
 ;offset-y = 1%
-;radius = 6
+radius = 4
 fixed-center = true
 
 background = ${colors.background}
@@ -203,9 +203,9 @@ font-1 = Symbols Nerd Font:size=11;2
 font-2 = Font Awesome:size=11;3
 
 
-modules-left = i3
-modules-center = date 
-modules-right = wlan cpu temperature battery
+modules-left =
+modules-center = i3 date 
+modules-right =
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -345,7 +345,7 @@ interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+;format-connected-underline = #9f78e1
 label-connected = %essid%
 
 format-disconnected =
@@ -386,7 +386,8 @@ time = %r
 time-alt =%r
 ;format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+;format-underline = #0a6cf5
+label-active-font = 3
 label = %date% %time%
 
 
@@ -395,13 +396,13 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging = <animation-charging> <label-charging> 
+;format-charging-underline = #ffb52a
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+;format-discharging-underline = ${self.format-charging-underline}
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+;format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
