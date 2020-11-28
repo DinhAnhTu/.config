@@ -252,19 +252,12 @@ bindsym $mod+Ctrl+l exec --no-startup-id ~/.config/i3/lock.sh
 ###
 
 #exec --no-startup-id volumeicon
-exec --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf -b
- 
-exec --no-startup-id ibus-daemon --xim -d -r
-exec --no-startup-id xinput --set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
-exec --no-startup-id xinput --set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Accel Speed" 1
 
 exec_always xrandr --output eDP-1 --mode 2880x1620
 
 exec_always xrandr --auto --output HDMI-1 --left-of eDP-1 --auto
 
 #exec --no-startup-id xrandr --output eDP-1 --brightness 0.7
-
-exec --no-startup-id xinput --map-to-output 'ELAN Touchscreen' eDP-1
 
 #exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
 #exec --no-startup-id xrandr --output HDMI-1 --brightness 0.7
@@ -273,6 +266,13 @@ exec --no-startup-id nitrogen --set-auto ~/.config/pictures/lost.jpg --head=1 &&
 
 
 exec --no-startup-id ~/.config/polybar/launch.sh
+
+exec --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf -b
+ 
+exec --no-startup-id ibus-daemon --xim -d -r
+exec --no-startup-id xinput --set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput --set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Accel Speed" 1
+exec --no-startup-id xinput --map-to-output 'ELAN Touchscreen' eDP-1
 
 ####
 #
