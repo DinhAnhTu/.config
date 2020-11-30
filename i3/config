@@ -27,6 +27,14 @@ gaps bottom 0
 for_window [class= "^.*"] border pixel 0
 for_window [title= "^.*"] border pixel 0
 
+client.focused #555555 #555555 #ffffff #2e9ef4     #67C23A
+
+popup_during_fullscreen smart
+
+bindsym $mod+Shift+b border pixel 0
+
+bindsym $mod+Shift+Ctrl+b border pixel 1
+
 for_window [class="Termite" instance="termite"] floating enable
 for_window [class="Microsoft-edge-dev" instance="microsoft-edge-dev" window_role="pop-up"] floating enable; resize set 1080px 700px
 
@@ -61,6 +69,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lock.sh --no
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 #exec --no-startup-id nm-applet
+
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
