@@ -47,3 +47,7 @@ color18 = #88909f
 color19 = #b7bec9
 color20 = #73b3e7
 color21 = #d390e7
+
+[options]
+font = Source Code Pro 16
+font = Source Code Pro Medium 16

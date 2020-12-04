@@ -35,8 +35,8 @@ bindsym $mod+Shift+b border pixel 0
 
 bindsym $mod+Shift+Ctrl+b border pixel 1
 
-for_window [class="Termite" instance="termite"] floating enable
-for_window [class="Microsoft-edge-dev" instance="microsoft-edge-dev" window_role="pop-up"] floating enable; resize set 1080px 700px
+for_window [class="Termite" instance="termite"] floating enable 
+for_window [class="Microsoft-edge-dev" instance="microsoft-edge-dev" window_role="pop-up"] floating enable
 
 #border_radius 6
 #smart_borders on
@@ -261,6 +261,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id ~/.config/i3/lock.sh
 ###
 
 #exec --no-startup-id volumeicon
+exec --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf -b
 
 exec_always xrandr --output eDP-1 --mode 2880x1620
 
@@ -275,8 +276,6 @@ exec --no-startup-id nitrogen --set-auto ~/.config/pictures/lost.jpg --head=1 &&
 
 
 exec --no-startup-id ~/.config/polybar/launch.sh
-
-exec --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf -b
  
 exec --no-startup-id ibus-daemon --xim -d -r
 exec --no-startup-id xinput --set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
