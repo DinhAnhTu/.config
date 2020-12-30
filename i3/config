@@ -261,7 +261,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id ~/.config/i3/lock.sh
 ###
 
 #exec --no-startup-id volumeicon
-exec --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf -b
+#exec --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf -b
 
 exec_always xrandr --output eDP-1 --mode 2880x1620
 
