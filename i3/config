@@ -26,8 +26,9 @@ gaps bottom 0
 
 for_window [class= "^.*"] border pixel 0
 for_window [title= "^.*"] border pixel 0
+for_window [class="Termite" instance="termite"] border pixel 1
 
-client.focused #555555 #555555 #ffffff #2e9ef4     #67C23A
+client.focused #555555 #555555 #ffffff #2e9ef4     #c3e8b0
 
 popup_during_fullscreen smart
 
