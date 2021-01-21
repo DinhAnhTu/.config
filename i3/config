@@ -273,8 +273,7 @@ exec_always xrandr --auto --output HDMI-1 --left-of eDP-1 --auto
 #exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
 #exec --no-startup-id xrandr --output HDMI-1 --brightness 0.7
 
-exec --no-startup-id nitrogen --set-auto ~/.config/pictures/lost.jpg --head=1 && nitrogen --set-zoom-fill ~/.config/pictures/start.jpg --head=0 
-
+#exec --no-startup-id nitrogen --set-zoom-fill ~/.config/pictures/start.jpg --head=0 
 
 exec --no-startup-id ~/.config/polybar/launch.sh
  
@@ -296,4 +295,4 @@ bindsym $mod+Shift+q exec systemctl suspend
 bindsym $mod+Shift+s exec systemctl poweroff
 
 # use gnome-screensaver lock screen
-bindsym $mod+Shift+n exec gnome-screensaver-command -l
+#bindsym $mod+Shift+n exec gnome-screensaver-command -l
