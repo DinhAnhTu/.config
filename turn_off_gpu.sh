@@ -54,3 +54,4 @@ else
 fi
 bluetoothctl power on &
 powertop --auto-tune &
+echo 10 | sudo tee /sys/class/backlight/intel_backlight/brightness &

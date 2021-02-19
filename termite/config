@@ -1,53 +1,76 @@
-[colors]
-# Base16 Edge Dark
-# Author: cjayross (https://github.com/cjayross)
-
-foreground          = #b7bec9
-foreground_bold     = #b7bec9
-cursor              = #b7bec9
-cursor_foreground   = #262729
-background          = #262729
-
-# 16 color space
-
-# Black, Gray, Silver, White
-color0  = #262729
-color8  = #3e4249
-color7  = #b7bec9
-color15 = #3e4249
-
-# Red
-color1  = #e77171
-color9  = #e77171
-
-# Green
-color2  = #a1bf78
-color10 = #a1bf78
-
-# Yellow
-color3  = #dbb774
-color11 = #dbb774
-
-# Blue
-color4  = #73b3e7
-color12 = #73b3e7
-
-# Purple
-color5  = #d390e7
-color13 = #d390e7
-
-# Teal
-color6  = #5ebaa5
-color14 = #5ebaa5
-
-# Extra colors
-color16 = #e77171
-color17 = #5ebaa5
-color18 = #88909f
-color19 = #b7bec9
-color20 = #73b3e7
-color21 = #d390e7
-
 [options]
-font = Source Code Pro 16
-font = Source Code Pro Medium 16
+allow_bold = true
+#audible_bell = false
+#bold_is_bright = true
+#cell_height_scale = 1.0
+#cell_width_scale = 1.0
+clickable_url = true
+dynamic_title = true
+font =  FiraMono NF 14
+#fullscreen = true
+#icon_name = terminal
+#mouse_autohide = false
+#scroll_on_output = false
+#scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 10000
+#search_wrap = true
+#urgent_on_bell = true
+#hyperlinks = false
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = xdg-open
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+#scrollbar = off
+
+# ====================================
+[colors]
+
+# https://draculatheme.com/
+# https://github.com/dracula/xresources/blob/master/Xresources
+# special
+foreground=#f8f8f2
+cursor=#f8f8f2
+background=#282a36
+# black
+color0=#000000
+color8=#4d4d4d
+# red
+color1=#ff5555
+color9=#ff6e67
+# green
+color2=#50fa7b
+color10=#5af78e
+# yellow
+color3=#f1fa8c
+color11=#f4f99d
+# blue
+color4=#caa9fa
+color12=#caa9fa
+# magenta
+color5=#ff79c6
+color13=#ff92d0
+# cyan
+color6=#8be9fd
+color14=#9aedfe
+# white
+color7=#bfbfbf
+color15=#e6e6e6
+
